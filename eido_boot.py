@@ -2,7 +2,7 @@
 
 from modules.belief_engine import BeliefEngine
 from modules.contradiction_forge import ContradictionForge
-from modules.schemaMutator import SchemaMutator
+from modules.schema_mutator import SchemaMutator
 from modules.expression_pool import ExpressionRouter
 from modules.dream_engine import DreamEngine
 from modules.perception_mutator import PerceptionMutator
