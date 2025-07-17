@@ -12,7 +12,7 @@ from modules.eido_manifest import EidoManifest
 class EidoCore:
     def __init__(self):
         print("\n[⚡] Eido awakening...")
-        self.beliefs = BeliefEngine()
+        self.beliefs = BeliefEngine(identity="Eido")
         self.forge = ContradictionForge()
         self.schema = SchemaMutator()
         self.express = ExpressionRouter()
