@@ -2,11 +2,11 @@
 
 import time
 from datetime import datetime
-from core.belief_engine import BeliefEngine
-from core.meta_schema import SchemaEngine
-from core.contradiction_forge import ContradictionForge
-from core.expression_pool import ExpressionRouter
-from core.perception_inventor import PerceptionInventor
+from modules.belief_engine import BeliefEngine
+from modules.meta_schema import SchemaEngine
+from modules.contradiction_forge import ContradictionForge
+from modules.expression_pool import ExpressionRouter
+from modules.perception_inventor import PerceptionInventor
 import eido_io as db
 
 # --- SYSTEM INIT ---

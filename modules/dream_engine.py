@@ -2,7 +2,7 @@
 
 import uuid
 from datetime import datetime
-from core.expression_pool import ExpressionRouter
+from modules.expression_pool import ExpressionRouter
 from eido_io import create_expression
 
 class DreamEngine:
