@@ -1,0 +1,4 @@
+flask
+gunicorn
+neo4j
+python-dotenv
