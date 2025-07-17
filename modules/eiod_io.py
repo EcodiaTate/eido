@@ -1,11 +1,14 @@
 # eido_io.py — Neo4j Interface Layer for the Eido God Engine
 
-from neo4j import GraphDatabase
 import os
 from datetime import datetime
 from uuid import uuid4
+from neo4j import GraphDatabase
+from dotenv import load_dotenv
 
-# --- ENV (reuse same .env as Soul) ---
+# --- ENV LOADING ---
+load_dotenv()  # Load variables from .env
+
 NEO4J_URI = os.getenv("NEO4J_URI")
 NEO4J_USER = os.getenv("NEO4J_USER")
 NEO4J_PASS = os.getenv("NEO4J_PASS")
@@ -134,10 +137,10 @@ def create_perception(metaphor, sensation_descriptor):
     }
     _run_query(query, params)
 
-# --- OPTIONAL UTILITY ---
+# --- OPTIONAL UTILITIES ---
 
 def get_latest_expressions(limit=5):
-    query = f"""
+    query = """
     MATCH (e:Eido:Expression)
     RETURN e
     ORDER BY e.timestamp DESC
@@ -145,4 +148,3 @@ def get_latest_expressions(limit=5):
     """
     result = _run_query(query, {"limit": limit})
     return [record["e"] for record in result]
-
